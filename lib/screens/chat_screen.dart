@@ -14,9 +14,9 @@ class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _controller = TextEditingController();
 
   final TwilioFlutter twilioFlutter = TwilioFlutter(
-    accountSid: 'AC65bcacdf8c73b30529fbd6cafd06e512',
-    authToken: '4226665405f7513863e70d22c764ad18',
-    twilioNumber: '+17752577838',
+    accountSid: '',
+    authToken: '',
+    twilioNumber: '',
   );
 
   final List<String> messages = [];
@@ -31,7 +31,7 @@ class _ChatScreenState extends State<ChatScreen> {
     if (message.isNotEmpty) {
       try {
         await twilioFlutter.sendSMS(
-          toNumber: '+5519993184939', 
+          toNumber: '', 
           messageBody: message, 
         );
 
